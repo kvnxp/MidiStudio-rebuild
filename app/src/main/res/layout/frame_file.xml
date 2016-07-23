@@ -37,7 +37,8 @@
             android:textStyle="bold"
             android:textSize="@dimen/textbuttonframesize"
             android:layout_below="@+id/button"
-            android:layout_marginBottom="5dp" />
+            android:layout_marginBottom="5dp"
+            android:onClick="saveFile" />
 
         <Button
             android:layout_width="match_parent"
@@ -49,7 +50,8 @@
             android:textColor="@color/textFramebutton"
             android:textStyle="bold"
             android:textSize="@dimen/textbuttonframesize"
-            android:layout_below="@+id/button3" />
+            android:layout_below="@+id/button3"
+            android:onClick="readFile" />
 
         <Button
             android:layout_width="match_parent"

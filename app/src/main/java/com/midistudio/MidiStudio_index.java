@@ -22,6 +22,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.midistudio.constants.Channels;
+import com.midistudio.constants.Profiles;
 
 import java.util.ArrayList;
 
@@ -137,7 +138,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
     public static int controls_count = 127;
     public static LinearLayout[] main_layouts;
     public static ArrayList<Button> channels_buttons_grid;
-    boolean[] buttons_status; //active or not
+    public static boolean[] buttons_status; //active or not
     int editing_ch;
     boolean inedit;
 
@@ -266,6 +267,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
         Thread loadbuttons = new Thread(new Runnable() {
             @Override
             public void run() {
+                Profiles.makefolders();
 
                 for (int i = 0; i < channels_count; i++) {
                     String buttonid = "ch" + (i + 1);
@@ -686,11 +688,38 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
 
     }
 
+
+
     @Override
     public void onBackPressed() {
 
     }
 
+    public void saveFile(View v){
+
+
+        Profiles.saveFile();
+    }
+
+    public void readFile(View v){
+        Profiles.readFile();
+    }
+
+    public static void gridmanager (){
+
+        if ( main_layouts[0].getVisibility() == View.VISIBLE ){
+
+            main_layouts[0].setVisibility(View.GONE);
+        }else{
+
+            main_layouts[0].setVisibility(View.VISIBLE);
+        }
+
+    }
+
+    public static void debug (String a){
+        Log.d("Debug",a);
+    }
     public void exit(View v){
         finish();
         System.exit(0);

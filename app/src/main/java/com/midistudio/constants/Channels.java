@@ -2,6 +2,7 @@ package com.midistudio.constants;
 
 import com.midistudio.MidiStudio_index;
 
+import java.nio.Buffer;
 import java.util.ArrayList;
 
 /**
@@ -9,6 +10,7 @@ import java.util.ArrayList;
  */
 public class Channels {
 
+    public static Buffer channels_buttons_grid;
 
 public static ArrayList<int[]> midichannel;
     public static Boolean[] channel_status;
