@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/Tab_Main"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Channel IN"
+                android:id="@+id/chnlidtxt"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <NumberPicker
+                android:tag="0"
+                android:layout_width="wrap_content"
+                android:layout_height="349dp"
+                android:id="@+id/picker_channel"
+                android:orientation="vertical"
+                android:layout_below="@+id/lsbSpinner"
+                android:layout_alignLeft="@+id/lsbtxt"
+                android:layout_alignStart="@+id/lsbtxt"
+                android:layout_gravity="center_horizontal"
+                android:solidColor="#50c051" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Program ID"
+                android:id="@+id/programidtxt"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:layout_toRightOf="@+id/chnlidtxt"
+
+                android:layout_alignTop="@+id/chnlidtxt"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentLeft="false"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <NumberPicker
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="349dp"
+                android:id="@+id/picker_program"
+                android:layout_below="@+id/spinnerprogram"
+                android:layout_alignLeft="@+id/programidtxt"
+                android:layout_alignStart="@+id/programidtxt"
+                android:layout_gravity="center_horizontal"
+                android:solidColor="#00fbff" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MSB Bank"
+                android:id="@+id/msbidtxt"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentLeft="false"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <NumberPicker
+                android:tag="2"
+                android:layout_width="wrap_content"
+                android:layout_height="349dp"
+                android:id="@+id/picker_msb"
+                android:layout_below="@+id/msbSpinner"
+                android:layout_alignLeft="@+id/msbtxt"
+                android:layout_gravity="center_horizontal"
+                android:solidColor="#d0c900" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LSB Bank"
+                android:id="@+id/lsbidtxt"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:layout_alignTop="@+id/msbidtxt"
+                android:layout_toRightOf="@+id/msbidtxt"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentLeft="false"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <NumberPicker
+                android:tag="3"
+                android:layout_width="wrap_content"
+                android:layout_height="349dp"
+                android:id="@+id/picker_lsb"
+                android:layout_below="@+id/spinnerchannelin"
+                android:layout_alignLeft="@+id/chnlidtxt"
+                android:layout_alignStart="@+id/chnlidtxt"
+                android:layout_gravity="center_horizontal"
+                android:solidColor="#d0c900" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainview"
+    android:baselineAligned="false">
+
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/layout_channel_button"
+                android:layout_weight="1" />
+        </ScrollView>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_channel_editor"
+            android:layout_gravity="left|center_vertical" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:visibility="visible"
+            android:layout_marginBottom="120dp">
+
+            <include
+                layout="@layout/frame_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                layout="@layout/frame_file"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                layout="@layout/frame_editmode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/frame_settings_menu" />
+
+        </RelativeLayout>
+
+        <Button
+            android:tag="99"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Panic"
+            android:id="@+id/PanicBtn"
+            android:background="#ff2929"
+            android:minHeight="100dp"
+            android:layout_centerVertical="true"
+            android:soundEffectsEnabled="false"
+            android:onClick="onclikuibuttons"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:enabled="true"
+            android:visibility="visible"
+            android:textColor="@color/textFramebutton"
+            android:textStyle="bold"
+            android:textSize="@dimen/textbuttonframesize" />
+
+    </FrameLayout>
+
+</LinearLayout>

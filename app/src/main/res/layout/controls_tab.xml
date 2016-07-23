@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Tab_Controls"
+    tools:context=".ChannelEditor">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlenable1"
+                android:checked="false"
+                android:tag="1"
+                android:button="@android:drawable/btn_radio"
+                android:layout_gravity="center_horizontal"
+                android:text="Enable"
+                android:textSize="26dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/controlvalue1"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal" />
+
+            <com.midistudio.mods.VerticalSeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlbar1"
+                android:layout_gravity="center_horizontal"
+                android:minWidth="300dp"
+                android:minHeight="100dp"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:max="127"
+                android:tag="1"
+                android:indeterminate="false"
+                android:progress="80"
+                android:clickable="true"
+                android:splitTrack="false" />
+
+            <NumberPicker
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlsnumberpick1"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="200dp"
+                android:solidColor="#b5b5b5" />
+
+            <Spinner
+
+                android:layout_width="200dp"
+                android:tag="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner1"
+                android:minHeight="80dp"
+                android:longClickable="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlenable2"
+                android:checked="false"
+                android:tag="2"
+                android:button="@android:drawable/btn_radio"
+                android:layout_gravity="center_horizontal"
+                android:text="Enable"
+                android:textSize="26dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/controlvalue2"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal" />
+
+            <com.midistudio.mods.VerticalSeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlbar2"
+                android:layout_gravity="center_horizontal"
+                android:minWidth="300dp"
+                android:minHeight="100dp"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:max="127"
+                android:tag="2"
+                android:indeterminate="false"
+                android:progress="80"
+                android:clickable="true"
+                android:splitTrack="false" />
+
+            <NumberPicker
+                android:tag="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlsnumberpick2"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="200dp"
+                android:solidColor="#b5b5b5">
+
+            </NumberPicker>
+
+            <Spinner
+                android:layout_width="200dp"
+                android:tag="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner2"
+                android:minHeight="80dp"
+                android:longClickable="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlenable3"
+                android:checked="false"
+                android:tag="3"
+                android:button="@android:drawable/btn_radio"
+                android:layout_gravity="center_horizontal"
+                android:text="Enable"
+                android:textSize="26dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/controlvalue3"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal" />
+
+            <com.midistudio.mods.VerticalSeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlbar3"
+                android:layout_gravity="center_horizontal"
+                android:minWidth="300dp"
+                android:minHeight="100dp"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:max="127"
+                android:tag="3"
+                android:indeterminate="false"
+                android:progress="80"
+                android:clickable="true"
+                android:splitTrack="false" />
+
+            <NumberPicker
+                android:tag="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlsnumberpick3"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="200dp"
+                android:solidColor="#b5b5b5">
+
+            </NumberPicker>
+
+            <Spinner
+                android:layout_width="200dp"
+                android:tag="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner3"
+                android:minHeight="80dp"
+                android:longClickable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlenable4"
+                android:checked="false"
+                android:tag="4"
+                android:button="@android:drawable/btn_radio"
+                android:layout_gravity="center_horizontal"
+                android:text="Enable"
+                android:textSize="26dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/controlvalue4"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal" />
+
+            <com.midistudio.mods.VerticalSeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlbar4"
+                android:layout_gravity="center_horizontal"
+                android:minWidth="300dp"
+                android:minHeight="100dp"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:max="127"
+                android:tag="4"
+                android:indeterminate="false"
+                android:progress="80"
+                android:clickable="true"
+                android:splitTrack="false" />
+
+            <NumberPicker
+                android:tag="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlsnumberpick4"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="200dp"
+                android:orientation="vertical"
+                android:solidColor="#b5b5b5">
+
+            </NumberPicker>
+
+            <Spinner
+                android:layout_width="200dp"
+                android:tag="4"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner4"
+                android:minHeight="80dp"
+                android:longClickable="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlenable5"
+                android:checked="false"
+                android:tag="5"
+                android:button="@android:drawable/btn_radio"
+                android:layout_gravity="center_horizontal"
+                android:text="Enable"
+                android:textSize="26dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/controlvalue5"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal" />
+
+            <com.midistudio.mods.VerticalSeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlbar5"
+                android:layout_gravity="center_horizontal"
+                android:minWidth="300dp"
+                android:minHeight="100dp"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:max="127"
+                android:tag="5"
+                android:indeterminate="false"
+                android:progress="80"
+                android:clickable="true"
+                android:splitTrack="false" />
+
+            <NumberPicker
+                android:tag="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlsnumberpick5"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="200dp"
+                android:solidColor="#b5b5b5">
+
+            </NumberPicker>
+
+            <Spinner
+                android:layout_width="200dp"
+                android:tag="5"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner5"
+                android:minHeight="80dp"
+                android:longClickable="false" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

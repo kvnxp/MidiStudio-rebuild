@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Configuration">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="File Name"
+            android:id="@+id/textView4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="24dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filename"
+            android:layout_below="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:width="150dp"
+            android:background="#ffffff"
+            android:minHeight="50dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open"
+            android:id="@+id/openButton"
+            android:onClick="read"
+            android:layout_alignBottom="@+id/filename"
+            android:layout_toRightOf="@+id/saveButton"
+            android:layout_toEndOf="@+id/saveButton"
+            android:background="#ffffff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:minWidth="100dp"
+            android:minHeight="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:id="@+id/saveButton"
+            android:onClick="save"
+            android:layout_alignBottom="@+id/filename"
+            android:layout_toRightOf="@+id/filename"
+            android:layout_toEndOf="@+id/filename"
+            android:background="#ffffff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:minWidth="100dp"
+            android:minHeight="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local off"
+            android:id="@+id/button2"
+            android:layout_below="@+id/filename"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="localmidi"
+            android:background="#ffffff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:minWidth="100dp"
+            android:minHeight="50dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Network Config"
+            android:id="@+id/ntconfig"
+            android:layout_below="@+id/button2"
+            android:layout_alignParentStart="true"
+            android:onClick="ntconfig"
+            android:background="#ffffff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:minWidth="100dp"
+            android:minHeight="50dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/networkspinner"
+            android:layout_below="@+id/ntconfig"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load RTP Midi"
+            android:id="@+id/RTPstart"
+            android:onClick="rtpstart"
+            android:layout_above="@+id/networkspinner"
+            android:layout_toEndOf="@+id/ntconfig"
+            android:background="#ffffff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:minWidth="100dp"
+            android:minHeight="50dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RTP"
+            android:id="@+id/rtpstats"
+            android:layout_above="@+id/ntconfig"
+            android:layout_alignEnd="@+id/RTPstart"
+            android:background="#ffffff"
+            android:minHeight="50dp"
+            android:minWidth="100dp"
+            android:onClick="rtpst" />
+
+    </RelativeLayout>
+</LinearLayout>

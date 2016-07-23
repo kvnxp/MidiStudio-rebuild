@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout_edit"
+    tools:context=".MidiStudio"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.midistudio.mods.scrollviewlock
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/EditScroll">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:id="@+id/namechanel"
+                    android:textAlignment="center"
+                    android:textSize="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#ffffff" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/newname"
+                    android:layout_below="@+id/namechanel"
+                    android:layout_toRightOf="@+id/namechanel"
+                    android:width="200dp"
+                    android:singleLine="true"
+                    android:inputType="text" />
+
+                <SeekBar
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editVolumeSeek"
+                    android:indeterminate="false"
+                    android:textAlignment="center"
+                    android:maxWidth="500dp"
+                    android:minWidth="300dp"
+                    android:minHeight="60dp"
+                    android:layout_alignTop="@+id/newname"
+                    android:layout_centerHorizontal="true"
+                    android:maxHeight="80dp"
+                    android:max="127" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volume:"
+                    android:id="@+id/textview"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:layout_alignRight="@+id/editVolumeSeek"
+                    android:layout_alignLeft="@+id/editVolumeSeek"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="127"
+                    android:id="@+id/volumeText"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_alignTop="@+id/editVolumeSeek"
+                    android:layout_alignLeft="@+id/editVolumeSeek"
+                    android:layout_alignRight="@+id/editVolumeSeek"
+                    android:layout_alignBottom="@+id/editVolumeSeek" />
+                <Button
+                    android:tag="50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sustain"
+                    android:id="@+id/sustainBtn"
+                    android:height="80dp"
+                    android:width="100dp"
+                    android:background="#ffffff"
+                    android:onClick="onclikuibuttons"
+                    android:soundEffectsEnabled="false"
+                    android:layout_below="@+id/namechanel"
+                    android:layout_toRightOf="@+id/editVolumeSeek"
+                    android:layout_toEndOf="@+id/editVolumeSeek"
+                    android:layout_marginLeft="33dp"
+                    android:textColor="#aa00a7"
+                    android:nestedScrollingEnabled="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Channel ID"
+                    android:id="@+id/ChannelID"
+                    android:layout_alignBottom="@+id/sustainBtn"
+                    android:layout_alignBaseline="@+id/sustainBtn"
+                    android:nestedScrollingEnabled="false"
+                    android:textColor="#79e200"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/main_tab" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/controls_tab"
+                    android:layout_marginTop="20px"
+                    android:layout_marginBottom="50dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.midistudio.mods.scrollviewlock>
+
+
+
+</LinearLayout>

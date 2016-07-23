@@ -1,0 +1,17 @@
+// BUTTONS TAGS
+
+tag 0 - 16: Midi channels
+tag 50: Sustain
+tag 98: Settings frame
+tag 99: button panic
+tag 100: edit mode
+tag 101: Frame main
+tag 102: File button
+
+
+// NUMBER PICKERS TAGS
+
+tag 0: channel in picker
+tag 1: program picker
+tag 2: msb bank picker
+tag 3: lsb bank picker

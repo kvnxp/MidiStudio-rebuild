@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Frame_main"
+    >
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:visibility="visible" >
+
+        <Button
+            android:tag="98"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:id="@+id/button5"
+            android:layout_alignParentStart="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentBottom="true"
+            android:background="@color/backgroundframebutton"
+            android:height="50dp"
+            android:textColor="@color/textFramebutton"
+            android:textSize="@dimen/textbuttonframesize"
+            android:textStyle="bold"
+            android:onClick="onclikuibuttons" />
+
+        <Button
+            android:tag="102"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="File"
+            android:id="@+id/button6"
+            android:onClick="onclikuibuttons"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/backgroundframebutton"
+            android:height="80dp"
+            android:textColor="@color/textFramebutton"
+            android:textSize="@dimen/textbuttonframesize"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

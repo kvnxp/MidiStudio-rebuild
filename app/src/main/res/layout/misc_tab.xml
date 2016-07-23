@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Tab_Misc"
+    tools:context=".ChannelEditor">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activate this channels"
+            android:id="@+id/textView2"
+            android:textSize="26dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="1"
+                android:text="ch1"
+                android:id="@+id/activatech1"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="2"
+                android:text="ch2"
+                android:id="@+id/activatech2"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="3"
+                android:text="ch3"
+                android:id="@+id/activatech3"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="4"
+                android:text="ch4"
+                android:id="@+id/activatech4"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="5"
+                android:text="ch5"
+                android:id="@+id/activatech5"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="6"
+                android:text="ch6"
+                android:id="@+id/activatech6"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="7"
+                android:text="ch7"
+                android:id="@+id/activatech7"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="8"
+                android:text="ch8"
+                android:id="@+id/activatech8"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="9"
+                android:text="ch9"
+                android:id="@+id/activatech9"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="10"
+                android:text="ch10"
+                android:id="@+id/activatech10"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="11"
+                android:text="ch11"
+                android:id="@+id/activatech11"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="12"
+                android:text="ch12"
+                android:id="@+id/activatech12"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="13"
+                android:text="ch13"
+                android:id="@+id/activatech13"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="14"
+                android:text="ch14"
+                android:id="@+id/activatech14"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="15"
+                android:text="ch15"
+                android:id="@+id/activatech15"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="16"
+                android:text="ch16"
+                android:id="@+id/activatech16"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelActivation" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deactivate this channels"
+            android:id="@+id/textView3"
+            android:textSize="26dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="1"
+                android:text="ch1"
+                android:id="@+id/deactivatech1"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="2"
+                android:text="ch2"
+                android:id="@+id/deactivatech2"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="3"
+                android:text="ch3"
+                android:id="@+id/deactivatech3"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="4"
+                android:text="ch4"
+                android:id="@+id/deactivatech4"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="5"
+                android:text="ch5"
+                android:id="@+id/deactivatech5"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="6"
+                android:text="ch6"
+                android:id="@+id/deactivatech6"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="7"
+                android:text="ch7"
+                android:id="@+id/deactivatech7"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="8"
+                android:text="ch8"
+                android:id="@+id/deactivatech8"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="9"
+                android:text="ch9"
+                android:id="@+id/deactivatech9"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="10"
+                android:text="ch10"
+                android:id="@+id/deactivatech10"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="11"
+                android:text="ch11"
+                android:id="@+id/deactivatech11"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="12"
+                android:text="ch12"
+                android:id="@+id/deactivatech12"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="13"
+                android:text="ch13"
+                android:id="@+id/deactivatech13"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="14"
+                android:text="ch14"
+                android:id="@+id/deactivatech14"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="15"
+                android:text="ch15"
+                android:id="@+id/deactivatech15"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="16"
+                android:text="ch16"
+                android:id="@+id/deactivatech16"
+                android:layout_weight="1"
+                android:button="@android:drawable/btn_radio"
+                android:onClick="channelDeactivation" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

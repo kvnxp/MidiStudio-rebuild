@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8a8b8f</color>
+    <color name="colorPrimaryDark">#4d4d4d</color>
+    <color name="colorAccent">#e1e1e1</color>
+    <color name="backgroundBlack">#000000</color>
+    <color name="backgroundframebutton">#454545</color>
+    <color name="textFramebutton">#ffffff</color>
+    <color name="textcolorwite">#ffffff</color>
+    <color name="textcolorblack">#000000</color>
+    <color name="orangebutton">#ef8730</color>
+    <color name="greenbutton">#b6ffc4</color>
+    <color name="sustainbutton">#00b6e9</color>
+
+</resources>
