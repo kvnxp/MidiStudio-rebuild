@@ -1,1 +1,1 @@
-include ':app','driver'
+include ':app', 'driver', ':gson-2.7'

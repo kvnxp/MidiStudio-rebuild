@@ -13,12 +13,12 @@ public class Channels {
     public static Buffer channels_buttons_grid;
 
 public static ArrayList<int[]> midichannel;
-    public static Boolean[] channel_status;
+    private static Boolean[] channel_status;
     public static int[] channel_target;
-    public static int[] controls;
+    private static int[] controls;
     public static int[] channel_program;
-    public static ArrayList<int[]> controls_assign;
     public static ArrayList<Boolean[]> controls_status;
+    public static ArrayList<int[]> controls_assign;
 
 public static void channelsetup () {
      int channel_count = MidiStudio_index.channels_count;
