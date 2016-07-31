@@ -12,7 +12,6 @@ import jp.kshoji.javax.sound.midi.usb.UsbMidiDevice;
  */
 public class MidiIO {
 
-
     public static ArrayList<UsbMidiDevice> usbMidiDevices;
     public static UsbMidiDriver midiDriver;
     public static ArrayList<MidiOutputDevice> midiout;

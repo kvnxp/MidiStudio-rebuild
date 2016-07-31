@@ -22,6 +22,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.midistudio.constants.Channels;
+import com.midistudio.constants.MidiIO;
 import com.midistudio.constants.Profiles;
 
 import java.util.ArrayList;
@@ -45,12 +46,13 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
 
     @Override
     public void onMidiInputDeviceAttached(@NonNull MidiInputDevice midiInputDevice) {
-
+        MidiIO.midiin.add(midiInputDevice);
+        Log.d("midi in",midiInputDevice.toString());
     }
 
     @Override
     public void onMidiOutputDeviceAttached(@NonNull MidiOutputDevice midiOutputDevice) {
-
+        MidiIO.midiout.add(midiOutputDevice);
     }
 
     @Override
