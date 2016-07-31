@@ -269,7 +269,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
         Thread loadbuttons = new Thread(new Runnable() {
             @Override
             public void run() {
-                Profiles.makefolders();
+                Profiles.makefolders(getApplicationContext());
 
                 for (int i = 0; i < channels_count; i++) {
                     String buttonid = "ch" + (i + 1);
