@@ -47,7 +47,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
     @Override
     public void onMidiInputDeviceAttached(@NonNull MidiInputDevice midiInputDevice) {
         MidiIO.midiin.add(midiInputDevice);
-        Log.d("midi in",midiInputDevice.toString());
+       debug(midiInputDevice);
     }
 
     @Override
@@ -62,12 +62,12 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
 
     @Override
     public void onMidiInputDeviceDetached(@NonNull MidiInputDevice midiInputDevice) {
-
+        MidiIO.midiin.remove(midiInputDevice);
     }
 
     @Override
     public void onMidiOutputDeviceDetached(@NonNull MidiOutputDevice midiOutputDevice) {
-
+        MidiIO.midiout.remove(midiOutputDevice);
     }
 
     @Override
@@ -92,11 +92,12 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
 
     @Override
     public void onMidiNoteOff(@NonNull MidiInputDevice sender, int cable, int channel, int note, int velocity) {
-
+        MidiIO.noteoff(sender,cable,channel,note,velocity);
     }
 
     @Override
     public void onMidiNoteOn(@NonNull MidiInputDevice sender, int cable, int channel, int note, int velocity) {
+        MidiIO.noteon(sender,cable,channel,note,velocity);
 
     }
 
@@ -175,6 +176,8 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_midi_studio);
+        MidiIO.midiin= new ArrayList<>(16);
+        MidiIO.midiout = new ArrayList<>(16);
         channels_buttons_grid = new ArrayList<>(16);
         buttons_status = new boolean[16];
         v = new View(this);
@@ -338,88 +341,9 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
         volumeSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                volumeText.setText(i+"");
-                Channels.midichannel.get(editing_ch)[7]=i;
-            }
 
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        controls_seekbarr.get(0).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        controls_seekbarr.get(1).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        controls_seekbarr.get(2).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        controls_seekbarr.get(3).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        controls_seekbarr.get(4).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
+                    volumeText.setText(i+"");
+                    Channels.midichannel.get(editing_ch)[7]=i;
             }
 
             @Override
@@ -446,13 +370,22 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
                     Channels.channel_target[editing_ch]=i1;
                     break;
                 case 1:
-                    Channels.channel_program[editing_ch]=i1;
+                    Channels.channel_program[editing_ch] = i1  ;
+
+                    MidiIO.setProgram(0, editing_ch, i1-1);
+
                     break;
                 case 2:
                     Channels.midichannel.get(editing_ch)[0]=i1;
+                    MidiIO.setControl(0,editing_ch,0,i1);
+                    MidiIO.setProgram(0, editing_ch, Channels.channel_program[editing_ch]-1);
+
                     break;
                 case 3:
                     Channels.midichannel.get(editing_ch)[32]=i1;
+                    MidiIO.setControl(0,editing_ch,32,i1);
+                    MidiIO.setProgram(0, editing_ch, Channels.channel_program[editing_ch]-1 );
+
                     break;
 
                 default:
@@ -594,9 +527,12 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
             case 50:
                 if (Channels.midichannel.get(editing_ch)[64] < 64 ){
                     Channels.midichannel.get(editing_ch)[64] = 127;
+                    MidiIO.setControl(0,editing_ch,64,127);
                 }
                 else {
                     Channels.midichannel.get(editing_ch)[64] = 0;
+                    MidiIO.setControl(0,editing_ch,64,0);
+
                 }
             sustainChangeColor();
                 break;
@@ -644,7 +580,6 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
             int tag = Integer.parseInt(numberPicker.getTag().toString());
             controls_Spinnes.get(tag-1 ).setSelection(i1,true);
             Channels.controls_assign.get(editing_ch)[tag-1]=i1;
-
         }
     };
 
@@ -655,6 +590,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
             int tag = Integer.parseInt(seekBar.getTag().toString());
             controls_text_progress.get(tag-1).setText(i+"");
             Channels.midichannel.get(editing_ch)[Channels.controls_assign.get(editing_ch)[tag-1]]=i;
+            MidiIO.setControl(0,editing_ch,Channels.controls_assign.get(editing_ch)[tag-1],i);
 
         }
 
@@ -719,8 +655,8 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
 
     }
 
-    public static void debug (String a){
-        Log.d("Debug",a);
+    public static void debug (Object a){
+        System.out.println("DEBUG: "+ a.toString());
     }
     public void exit(View v){
         finish();

@@ -12,6 +12,7 @@ public class Channels {
 
     public static Buffer channels_buttons_grid;
 
+
 public static ArrayList<int[]> midichannel;
     private static Boolean[] channel_status;
     public static int[] channel_target;
@@ -34,7 +35,7 @@ public static void channelsetup () {
 
     for (int ch = 0; ch < channel_count; ch++) {
 
-        midichannel.add(new int[controls_count]);
+        midichannel.add(new int[controls_count+1]);
         channel_status[ch]=false;
         channel_target[ch]=ch+1;
          controls_assign.add(new int[5]);

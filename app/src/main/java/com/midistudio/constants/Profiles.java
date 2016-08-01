@@ -137,8 +137,7 @@ public static void makefolders (Context cont) {
             e.printStackTrace();
         }
 
-
-//            //TODO build a new variables with a for  read variables and write on actually variables
+        MidiIO.reloadChannels();
         MidiStudio_index.gridmanager();
     }
 
