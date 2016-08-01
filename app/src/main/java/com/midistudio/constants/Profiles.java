@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.gson.Gson;
 import com.midistudio.MidiStudio_index;
 import com.midistudio.R;
 
@@ -61,7 +60,6 @@ public static void makefolders (Context cont) {
             gridname[i]= buttongrid.getText().toString();
         }
 
-        Gson json = new Gson();
 
         Collection co = new ArrayList();
         co.add(gridname);
