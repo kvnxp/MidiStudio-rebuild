@@ -24,7 +24,7 @@ import java.util.Collection;
  */
 public class Profiles {
 
-    //// TODO ready to save files
+
     static Context context;
 private static String sdcard;
     private static String[] gridname;
@@ -83,22 +83,10 @@ public static void makefolders (Context cont) {
             e.printStackTrace();
         }
 
-
-//        String a = json.toJson(co);
-//
-//        try {
-//            FileWriter f = new FileWriter(sdcard+"/file.mso");
-//            f.write(a);
-//            f.flush();
-//            f.close();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
         Log.e("","");
 
         MidiStudio_index.main_layouts[0].setVisibility(View.VISIBLE);
+        MidiStudio_index.alert("File","Save complete");
 
     }
 
@@ -137,6 +125,9 @@ public static void makefolders (Context cont) {
 
         MidiIO.reloadChannels();
         MidiStudio_index.gridmanager();
+        MidiStudio_index.alert("File","Load Complete");
     }
+
+
 
 }

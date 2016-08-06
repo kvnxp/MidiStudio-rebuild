@@ -1,6 +1,7 @@
 package com.midistudio;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.graphics.Color;
 import android.hardware.usb.UsbDevice;
 import android.os.Bundle;
@@ -176,6 +177,9 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_midi_studio);
+        MidiIO midio = new MidiIO();
+        midio.setup(this);
+
         MidiIO.midiin= new ArrayList<>(16);
         MidiIO.midiout = new ArrayList<>(16);
         channels_buttons_grid = new ArrayList<>(16);
@@ -536,10 +540,14 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
                 }
             sustainChangeColor();
                 break;
+            case 97:
+                //TODO configure  local modo
+                break;
             case 98:
                 change_frame(3);
                 break;
             case 99:
+                MidiIO.panicAll();
                 break;
             case 101:
                 change_frame(0);
@@ -652,6 +660,22 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
         }
 
     }
+
+    public void reload(View v) {
+        MidiIO.reloadChannels();
+    }
+
+    public static void alert(String title,String message) {
+
+        AlertDialog.Builder alertDialog =new AlertDialog.Builder(MidiIO.context);
+        alertDialog.setTitle(title);
+        alertDialog.setMessage(message);
+        alertDialog.setPositiveButton("Ok",null);
+        alertDialog.create();
+        alertDialog.show();
+    }
+
+
 
     public static void debug (Object a){
         System.out.println("DEBUG: "+ a.toString());

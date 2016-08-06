@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="100dp"
     android:layout_height="match_parent"
     android:id="@+id/Frame_settings"
     android:visibility="visible">
@@ -25,6 +25,7 @@
             android:textSize="@dimen/textbuttonframesize" />
 
         <Button
+            android:tag="97"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Local mode"
@@ -33,6 +34,20 @@
             android:background="@color/backgroundframebutton"
             android:textColor="@color/textFramebutton"
             android:textStyle="bold"
-            android:textSize="@dimen/textbuttonframesize" />
+            android:textSize="@dimen/textbuttonframesize"
+            android:onClick="onclikuibuttons" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHR"
+            android:id="@+id/button9"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textbuttonframesize"
+            android:textStyle="bold"
+            android:height="60dp"
+            android:onClick="reload"
+            android:background="@color/backgroundframebutton"
+            android:layout_marginTop="20dp" />
     </LinearLayout>
 </LinearLayout>

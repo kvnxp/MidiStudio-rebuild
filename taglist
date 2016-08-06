@@ -2,6 +2,7 @@
 
 tag 0 - 16: Midi channels
 tag 50: Sustain
+tag 97: Local mode Setup
 tag 98: Settings frame
 tag 99: button panic
 tag 100: edit mode
