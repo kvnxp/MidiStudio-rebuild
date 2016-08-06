@@ -626,8 +626,6 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
 
     }
 
-
-
     @Override
     public void onBackPressed() {
 
