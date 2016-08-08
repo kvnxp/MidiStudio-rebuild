@@ -179,6 +179,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
         setContentView(R.layout.activity_midi_studio);
         MidiIO midio = new MidiIO();
         midio.setup(this);
+        MidiIO.debug=true;
 
         MidiIO.midiin= new ArrayList<>(16);
         MidiIO.midiout = new ArrayList<>(16);
@@ -348,6 +349,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
 
                     volumeText.setText(i+"");
                     Channels.midichannel.get(editing_ch)[7]=i;
+                    MidiIO.setControl(0,editing_ch,7,i);
             }
 
             @Override
@@ -375,7 +377,6 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
                     break;
                 case 1:
                     Channels.channel_program[editing_ch] = i1  ;
-
                     MidiIO.setProgram(0, editing_ch, i1-1);
 
                     break;
@@ -541,7 +542,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
             sustainChangeColor();
                 break;
             case 97:
-                //TODO configure  local modo
+                MidiIO.setLocalMidi();
                 break;
             case 98:
                 change_frame(3);

@@ -30,6 +30,15 @@
                 android:textSize="26dp"
                 android:textAlignment="center" />
 
+            <Spinner
+
+                android:layout_width="200dp"
+                android:tag="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner1"
+                android:minHeight="80dp"
+                android:longClickable="false" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,7 +61,8 @@
                 android:indeterminate="false"
                 android:progress="80"
                 android:clickable="true"
-                android:splitTrack="false" />
+                android:splitTrack="false"
+                android:layout_marginBottom="50dp" />
 
             <NumberPicker
                 android:tag="1"
@@ -63,14 +73,6 @@
                 android:minHeight="200dp"
                 android:solidColor="#b5b5b5" />
 
-            <Spinner
-
-                android:layout_width="200dp"
-                android:tag="1"
-                android:layout_height="wrap_content"
-                android:id="@+id/controlSpinner1"
-                android:minHeight="80dp"
-                android:longClickable="false" />
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -89,6 +91,14 @@
                 android:text="Enable"
                 android:textSize="26dp"
                 android:textAlignment="center" />
+
+            <Spinner
+                android:layout_width="200dp"
+                android:tag="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner2"
+                android:minHeight="80dp"
+                android:longClickable="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -112,7 +122,8 @@
                 android:indeterminate="false"
                 android:progress="80"
                 android:clickable="true"
-                android:splitTrack="false" />
+                android:splitTrack="false"
+                android:layout_marginBottom="50dp" />
 
             <NumberPicker
                 android:tag="2"
@@ -125,13 +136,6 @@
 
             </NumberPicker>
 
-            <Spinner
-                android:layout_width="200dp"
-                android:tag="2"
-                android:layout_height="wrap_content"
-                android:id="@+id/controlSpinner2"
-                android:minHeight="80dp"
-                android:longClickable="false" />
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -150,6 +154,14 @@
                 android:text="Enable"
                 android:textSize="26dp"
                 android:textAlignment="center" />
+
+            <Spinner
+                android:layout_width="200dp"
+                android:tag="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner3"
+                android:minHeight="80dp"
+                android:longClickable="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -173,7 +185,8 @@
                 android:indeterminate="false"
                 android:progress="80"
                 android:clickable="true"
-                android:splitTrack="false" />
+                android:splitTrack="false"
+                android:layout_marginBottom="50dp" />
 
             <NumberPicker
                 android:tag="3"
@@ -186,13 +199,6 @@
 
             </NumberPicker>
 
-            <Spinner
-                android:layout_width="200dp"
-                android:tag="3"
-                android:layout_height="wrap_content"
-                android:id="@+id/controlSpinner3"
-                android:minHeight="80dp"
-                android:longClickable="false" />
         </LinearLayout>
 
         <LinearLayout
@@ -212,6 +218,14 @@
                 android:text="Enable"
                 android:textSize="26dp"
                 android:textAlignment="center" />
+
+            <Spinner
+                android:layout_width="200dp"
+                android:tag="4"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner4"
+                android:minHeight="80dp"
+                android:longClickable="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -235,7 +249,8 @@
                 android:indeterminate="false"
                 android:progress="80"
                 android:clickable="true"
-                android:splitTrack="false" />
+                android:splitTrack="false"
+                android:layout_marginBottom="50dp" />
 
             <NumberPicker
                 android:tag="4"
@@ -249,13 +264,6 @@
 
             </NumberPicker>
 
-            <Spinner
-                android:layout_width="200dp"
-                android:tag="4"
-                android:layout_height="wrap_content"
-                android:id="@+id/controlSpinner4"
-                android:minHeight="80dp"
-                android:longClickable="false" />
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -274,6 +282,14 @@
                 android:text="Enable"
                 android:textSize="26dp"
                 android:textAlignment="center" />
+
+            <Spinner
+                android:layout_width="200dp"
+                android:tag="5"
+                android:layout_height="wrap_content"
+                android:id="@+id/controlSpinner5"
+                android:minHeight="80dp"
+                android:longClickable="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -297,7 +313,8 @@
                 android:indeterminate="false"
                 android:progress="80"
                 android:clickable="true"
-                android:splitTrack="false" />
+                android:splitTrack="false"
+                android:layout_marginBottom="50dp" />
 
             <NumberPicker
                 android:tag="5"
@@ -310,13 +327,6 @@
 
             </NumberPicker>
 
-            <Spinner
-                android:layout_width="200dp"
-                android:tag="5"
-                android:layout_height="wrap_content"
-                android:id="@+id/controlSpinner5"
-                android:minHeight="80dp"
-                android:longClickable="false" />
         </LinearLayout>
 
 

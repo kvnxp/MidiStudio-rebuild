@@ -1,6 +1,7 @@
 package com.midistudio.constants;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Environment;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
@@ -112,6 +113,10 @@ public static void makefolders (Context cont) {
                MidiStudio_index.channels_buttons_grid.get(i).setText(a[i]);
                 if (MidiStudio_index.buttons_status[i]){
                     MidiStudio_index.channels_buttons_grid.get(i).setBackgroundColor(ContextCompat.getColor(context, R.color.orangebutton));
+                }
+                else {
+                    MidiStudio_index.channels_buttons_grid.get(i).setBackgroundColor(Color.WHITE);
+
                 }
             }
 

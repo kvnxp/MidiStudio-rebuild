@@ -1,11 +1,9 @@
 package com.midistudio.constants;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.midistudio.MidiStudio_index;
 
-import java.nio.channels.Channel;
 import java.util.ArrayList;
 
 import jp.kshoji.driver.midi.device.MidiInputDevice;
@@ -24,6 +22,7 @@ public class MidiIO {
     public static ArrayList<MidiOutputDevice> midiout;
     public static ArrayList<MidiInputDevice> midiin;
     public static ArrayList<Integer> channelin;
+    public static boolean debug;
 
     public void setup(Context cont) {
         this.context = cont;
@@ -54,36 +53,51 @@ public class MidiIO {
 
 
     public  static void noteoff(MidiInputDevice sender, int cable, int channel, int note, int velocity) {
-        midiout.get(cable).sendMidiNoteOff(cable,channel,note,0);
+
+        if ( channel ==  Channels.channel_target[0] -1 ){midiout.get(cable).sendMidiNoteOff(cable,0,note,0);}
+        if ( channel ==  Channels.channel_target[1] -1 ){midiout.get(cable).sendMidiNoteOff(cable,1,note,0);}
+        if ( channel ==  Channels.channel_target[2] -1 ){midiout.get(cable).sendMidiNoteOff(cable,2,note,0);}
+        if ( channel ==  Channels.channel_target[3] -1 ){midiout.get(cable).sendMidiNoteOff(cable,3,note,0);}
+        if ( channel ==  Channels.channel_target[4] -1 ){midiout.get(cable).sendMidiNoteOff(cable,4,note,0);}
+        if ( channel ==  Channels.channel_target[5] -1 ){midiout.get(cable).sendMidiNoteOff(cable,5,note,0);}
+        if ( channel ==  Channels.channel_target[6] -1 ){midiout.get(cable).sendMidiNoteOff(cable,6,note,0);}
+        if ( channel ==  Channels.channel_target[7] -1 ){midiout.get(cable).sendMidiNoteOff(cable,7,note,0);}
+        if ( channel ==  Channels.channel_target[8] -1 ){midiout.get(cable).sendMidiNoteOff(cable,8,note,0);}
+        if ( channel ==  Channels.channel_target[9] -1 ){midiout.get(cable).sendMidiNoteOff(cable,9,note,0);}
+        if ( channel ==  Channels.channel_target[10] -1 ){midiout.get(cable).sendMidiNoteOff(cable,10,note,0);}
+        if ( channel ==  Channels.channel_target[11] -1 ){midiout.get(cable).sendMidiNoteOff(cable,11,note,0);}
+        if ( channel ==  Channels.channel_target[12] -1 ){midiout.get(cable).sendMidiNoteOff(cable,12,note,0);}
+        if ( channel ==  Channels.channel_target[13] -1 ){midiout.get(cable).sendMidiNoteOff(cable,13,note,0);}
+        if ( channel ==  Channels.channel_target[14] -1 ){midiout.get(cable).sendMidiNoteOff(cable,14,note,0);}
+        if ( channel ==  Channels.channel_target[15] -1 ){midiout.get(cable).sendMidiNoteOff(cable,15,note,0);}
+
+
+
     }
 
     public static void noteon(MidiInputDevice sender, int cable, int channel, int note, int velocity) {
-
-        if (MidiStudio_index.buttons_status[0] && channel == Channels.channel_target[0] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[1] && channel == Channels.channel_target[1] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[2] && channel == Channels.channel_target[2] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[3] && channel == Channels.channel_target[3] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[4] && channel == Channels.channel_target[4] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[5] && channel == Channels.channel_target[5] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[6] && channel == Channels.channel_target[6] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[7] && channel == Channels.channel_target[7] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[8] && channel == Channels.channel_target[8] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[9] && channel == Channels.channel_target[9] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[10] && channel == Channels.channel_target[10] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[11] && channel == Channels.channel_target[11] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[12] && channel == Channels.channel_target[12] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[13] && channel == Channels.channel_target[13] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[14] && channel == Channels.channel_target[14] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
-        if (MidiStudio_index.buttons_status[15] && channel == Channels.channel_target[15] - 1) {sendmidion(0,Channels.channel_target[channel] - 1 ,note,velocity);}
+        if ( channel == Channels.channel_target[0] - 1&& MidiStudio_index.buttons_status[0] ) {sendmidion(0,0,note,velocity);}
+        if ( channel == Channels.channel_target[1] - 1&& MidiStudio_index.buttons_status[1] ) {sendmidion(0,1,note,velocity);}
+        if ( channel == Channels.channel_target[2] - 1&& MidiStudio_index.buttons_status[2] ) {sendmidion(0,2,note,velocity);}
+        if ( channel == Channels.channel_target[3] - 1&& MidiStudio_index.buttons_status[3] ) {sendmidion(0,3,note,velocity);}
+        if ( channel == Channels.channel_target[4] - 1&& MidiStudio_index.buttons_status[4] ) {sendmidion(0,4,note,velocity);}
+        if ( channel == Channels.channel_target[5] - 1&& MidiStudio_index.buttons_status[5] ) {sendmidion(0,5,note,velocity);}
+        if ( channel == Channels.channel_target[6] - 1&& MidiStudio_index.buttons_status[6] ) {sendmidion(0,6,note,velocity);}
+        if ( channel == Channels.channel_target[7] - 1&& MidiStudio_index.buttons_status[7] ) {sendmidion(0,7,note,velocity);}
+        if ( channel == Channels.channel_target[8] - 1&& MidiStudio_index.buttons_status[8] ) {sendmidion(0,8,note,velocity);}
+        if ( channel == Channels.channel_target[9] - 1&& MidiStudio_index.buttons_status[9] ) {sendmidion(0,9,note,velocity);}
+        if ( channel == Channels.channel_target[10] - 1&& MidiStudio_index.buttons_status[10] ) {sendmidion(0,10,note,velocity);}
+        if ( channel == Channels.channel_target[11] - 1&& MidiStudio_index.buttons_status[11] ) {sendmidion(0,11,note,velocity);}
+        if ( channel == Channels.channel_target[12] - 1&& MidiStudio_index.buttons_status[12] ) {sendmidion(0,12,note,velocity);}
+        if ( channel == Channels.channel_target[13] - 1&& MidiStudio_index.buttons_status[13] ) {sendmidion(0,13,note,velocity);}
+        if ( channel == Channels.channel_target[14] - 1&& MidiStudio_index.buttons_status[14] ) {sendmidion(0,14,note,velocity);}
+        if ( channel == Channels.channel_target[15] - 1&& MidiStudio_index.buttons_status[15] ) {sendmidion(0,15,note,velocity);}
 
     }
 
-    private static void sendmidion (int cable, int channel, int note, int velocity){
-        if (midiout.size() >0 ) {
+    private static void sendmidion (int cable, int channel, int note, int velocity) {
+        if (midiout.size() > 0) {
             midiout.get(0).sendMidiNoteOn(cable, channel, note, velocity);
-        }
-        else {
-            simulatemidi(1,cable,channel,note,velocity);
         }
     }
 
@@ -91,17 +105,17 @@ public class MidiIO {
     public static void setProgram (int cable, int channel, int program){
         if (midiout.size() >0 ){
         midiout.get(0).sendMidiProgramChange(cable,channel,program);}
-        else {
+
+        if (midiout.size() == 0 || debug ){
             simulatemidi(2,cable,channel,0,program);
         }
-
 
     }
 
     public static void setControl (int cable, int channel, int function, int value){
         if (midiout.size() >0 ){
             midiout.get(0).sendMidiControlChange(cable,channel,function,value);}
-        else {
+        if (midiout.size() == 0 || debug ){
             simulatemidi(3,cable,channel,function,value);
         }
 
@@ -114,11 +128,13 @@ public class MidiIO {
                 switch (b){
                     case 0:
                         setControl(0,a,b,channelselect[b]);
+                        setProgram(0,a,Channels.channel_program[a]);
                         break;
                     case 7:
                         setControl(0,a,b,channelselect[b]);
                     case 32:
                         setControl(0,a,b,channelselect[b]);
+                        setProgram(0,a,Channels.channel_program[a]);
                         break;
                     default:
                         if (Channels.controls_assign.get(a)[0] == b){
@@ -145,7 +161,7 @@ public class MidiIO {
 
 
             }
-            setProgram(0,a,Channels.channel_program[a]);
+            setProgram(0,a+1,Channels.channel_program[a]);
         }
 
             MidiStudio_index.alert("Midi I/O"," Reloading channels complete");
@@ -176,5 +192,9 @@ public class MidiIO {
         }
         MidiStudio_index.debug("PANIC silence all channels");
 
+    }
+
+    public static void setLocalMidi() {
+        setControl(0,0,122,0 );
     }
 }
