@@ -208,6 +208,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
 
         // editomode
         savebtn = (Button) findViewById(R.id.saveeditbtn);
+        //TODO remplace channelid to button for is this channel enable  change color text to -> green for enable  button -> black
         channelid= (TextView)findViewById(R.id.ChannelID);
         sustain= (Button)findViewById(R.id.sustainBtn);
         volumeSeek= (SeekBar)findViewById(R.id.editVolumeSeek);
@@ -424,6 +425,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
     public void editmode(int chn) {
 
         if (!inedit) {
+            scroll.fullScroll(View.FOCUS_UP);
             editing_ch = chn;
             loadvaluesedit.run();
             inedit = true;
