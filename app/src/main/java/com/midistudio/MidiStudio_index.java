@@ -318,6 +318,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        scroll.scrollTo(0,0);
                         volumeText.setText(volume+"");
                         volumeSeek.setProgress(volume);
                         main_tab_pickers.get(0).setValue(Channels.channel_target[editing_ch]);
@@ -426,7 +427,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
     public void editmode(int chn) {
 
         if (!inedit) {
-            scroll.fullScroll(View.FOCUS_UP);
+
             editing_ch = chn;
             loadvaluesedit.run();
             inedit = true;
