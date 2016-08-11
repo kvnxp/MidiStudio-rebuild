@@ -205,6 +205,7 @@ public class MidiStudio_index extends AbstractMultipleMidiActivity {
         main_layouts[1] = (LinearLayout) findViewById(R.id.Layout_edit);
         main_layouts[1].setVisibility(View.INVISIBLE);
 
+        //TODO add  button reset controls in settings frame
 
         // editomode
         savebtn = (Button) findViewById(R.id.saveeditbtn);
